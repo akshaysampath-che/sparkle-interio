@@ -1,0 +1,123 @@
+/**
+ * Sparkle Interio — color primitives & semantic tokens
+ * Palette: warm beige, muted earth, ivory, charcoal, restrained gold
+ * Contrast targets: WCAG 2.1 AA (4.5:1 body, 3:1 large type / UI)
+ */
+
+:root {
+  /* —— Primitives —— */
+  --palette-ivory: oklch(0.985 0.006 95);
+  --palette-ivory-soft: oklch(0.965 0.01 92);
+  --palette-beige: oklch(0.935 0.018 88);
+  --palette-beige-warm: oklch(0.9 0.028 82);
+  --palette-sand: oklch(0.84 0.032 78);
+  --palette-earth: oklch(0.58 0.038 68);
+  --palette-earth-muted: oklch(0.5 0.032 65);
+  --palette-charcoal: oklch(0.27 0.018 285);
+  --palette-charcoal-deep: oklch(0.19 0.016 285);
+  --palette-gold: oklch(0.72 0.065 82);
+  --palette-gold-muted: oklch(0.62 0.045 80);
+  --palette-gold-subtle: oklch(0.88 0.03 85);
+
+  /* —— Semantic (light) —— */
+  --background: var(--palette-ivory);
+  --foreground: var(--palette-charcoal);
+  --card: var(--palette-ivory-soft);
+  --card-foreground: var(--palette-charcoal);
+  --popover: var(--palette-ivory);
+  --popover-foreground: var(--palette-charcoal);
+  --primary: var(--palette-charcoal);
+  --primary-foreground: var(--palette-ivory);
+  --secondary: var(--palette-beige);
+  --secondary-foreground: var(--palette-charcoal);
+  --muted: var(--palette-beige);
+  --muted-foreground: var(--palette-earth-muted);
+  --accent: var(--palette-gold-subtle);
+  --accent-foreground: var(--palette-charcoal);
+  --destructive: oklch(0.52 0.19 25);
+  --border: var(--palette-beige-warm);
+  --input: var(--palette-beige-warm);
+  --ring: var(--palette-gold-muted);
+
+  /* Brand accents */
+  --brand: var(--palette-gold-muted);
+  --brand-foreground: var(--palette-charcoal);
+  --brand-subtle: var(--palette-gold-subtle);
+
+  /* Surface layers */
+  --surface-elevated: var(--palette-ivory-soft);
+  --surface-sunken: var(--palette-beige);
+
+  /* Sidebar (shadcn) */
+  --sidebar: var(--palette-ivory-soft);
+  --sidebar-foreground: var(--palette-charcoal);
+  --sidebar-primary: var(--palette-charcoal);
+  --sidebar-primary-foreground: var(--palette-ivory);
+  --sidebar-accent: var(--palette-beige);
+  --sidebar-accent-foreground: var(--palette-charcoal);
+  --sidebar-border: var(--palette-beige-warm);
+  --sidebar-ring: var(--palette-gold-muted);
+
+  /* Data viz — earth-toned neutrals */
+  --chart-1: var(--palette-gold-muted);
+  --chart-2: var(--palette-earth);
+  --chart-3: var(--palette-sand);
+  --chart-4: var(--palette-earth-muted);
+  --chart-5: var(--palette-charcoal);
+}
+
+.dark {
+  --palette-ivory: oklch(0.96 0.008 95);
+  --palette-ivory-soft: oklch(0.92 0.01 92);
+  --palette-beige: oklch(0.32 0.02 285);
+  --palette-beige-warm: oklch(0.38 0.022 285);
+  --palette-sand: oklch(0.45 0.028 75);
+  --palette-earth: oklch(0.68 0.04 75);
+  --palette-earth-muted: oklch(0.72 0.03 80);
+  --palette-charcoal: oklch(0.96 0.008 95);
+  --palette-charcoal-deep: oklch(0.14 0.014 285);
+  --palette-gold: oklch(0.78 0.07 82);
+  --palette-gold-muted: oklch(0.7 0.055 80);
+  --palette-gold-subtle: oklch(0.28 0.03 80);
+
+  --background: var(--palette-charcoal-deep);
+  --foreground: var(--palette-ivory);
+  --card: oklch(0.22 0.016 285);
+  --card-foreground: var(--palette-ivory);
+  --popover: oklch(0.22 0.016 285);
+  --popover-foreground: var(--palette-ivory);
+  --primary: var(--palette-ivory);
+  --primary-foreground: var(--palette-charcoal-deep);
+  --secondary: oklch(0.26 0.018 285);
+  --secondary-foreground: var(--palette-ivory);
+  --muted: oklch(0.26 0.018 285);
+  --muted-foreground: var(--palette-earth-muted);
+  --accent: var(--palette-gold-subtle);
+  --accent-foreground: var(--palette-ivory);
+  --destructive: oklch(0.65 0.18 22);
+  --border: oklch(1 0 0 / 11%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: var(--palette-gold-muted);
+
+  --brand: var(--palette-gold);
+  --brand-foreground: var(--palette-charcoal-deep);
+  --brand-subtle: oklch(0.32 0.035 80);
+
+  --surface-elevated: oklch(0.22 0.016 285);
+  --surface-sunken: oklch(0.16 0.014 285);
+
+  --sidebar: oklch(0.2 0.015 285);
+  --sidebar-foreground: var(--palette-ivory);
+  --sidebar-primary: var(--palette-gold-muted);
+  --sidebar-primary-foreground: var(--palette-charcoal-deep);
+  --sidebar-accent: oklch(0.26 0.018 285);
+  --sidebar-accent-foreground: var(--palette-ivory);
+  --sidebar-border: oklch(1 0 0 / 11%);
+  --sidebar-ring: var(--palette-gold-muted);
+
+  --chart-1: var(--palette-gold);
+  --chart-2: var(--palette-earth);
+  --chart-3: var(--palette-sand);
+  --chart-4: var(--palette-earth-muted);
+  --chart-5: var(--palette-ivory-soft);
+}

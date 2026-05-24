@@ -1,0 +1,97 @@
+/**
+ * Sparkle Interio — layout tokens & utilities
+ */
+
+:root {
+  --container-max: 72rem; /* 1152px — editorial content */
+  --container-max-wide: 90rem; /* 1440px — full-bleed galleries */
+  --container-max-narrow: 40rem; /* 640px — prose / forms */
+  --container-padding: 1.25rem;
+  --radius: 0.375rem; /* restrained — architectural, not bubbly */
+}
+
+@media (min-width: 640px) {
+  :root {
+    --container-padding: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --container-padding: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --container-padding: 3rem;
+  }
+}
+
+/* —— Container utilities —— */
+@utility container-base {
+  margin-inline: auto;
+  width: 100%;
+  max-width: var(--container-max);
+  padding-inline: var(--container-padding);
+}
+
+@utility container-wide {
+  margin-inline: auto;
+  width: 100%;
+  max-width: var(--container-max-wide);
+  padding-inline: var(--container-padding);
+}
+
+@utility container-narrow {
+  margin-inline: auto;
+  width: 100%;
+  max-width: var(--container-max-narrow);
+  padding-inline: var(--container-padding);
+}
+
+@utility container-full {
+  width: 100%;
+  padding-inline: var(--container-padding);
+}
+
+/* —— Section spacing utilities —— */
+@utility section-y-xs {
+  padding-block: var(--section-y-xs);
+}
+
+@utility section-y-sm {
+  padding-block: var(--section-y-sm);
+}
+
+@utility section-y-md {
+  padding-block: var(--section-y-md);
+}
+
+@utility section-y-lg {
+  padding-block: var(--section-y-lg);
+}
+
+@utility section-y-xl {
+  padding-block: var(--section-y-xl);
+}
+
+@utility section-gap-xs {
+  gap: var(--stack-xs);
+}
+
+@utility section-gap-sm {
+  gap: var(--stack-sm);
+}
+
+@utility section-gap-md {
+  gap: var(--stack-md);
+}
+
+@utility section-gap-lg {
+  gap: var(--stack-lg);
+}
+
+@utility section-gap-xl {
+  gap: var(--stack-xl);
+}

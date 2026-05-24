@@ -1,0 +1,37 @@
+/**
+ * Sparkle Interio — restrained motion tokens
+ * Calm, premium transitions — no flashy defaults
+ */
+
+:root {
+  /* Durations */
+  --duration-instant: 100ms;
+  --duration-fast: 150ms;
+  --duration-normal: 280ms;
+  --duration-slow: 420ms;
+  --duration-emphasis: 640ms;
+
+  /* Easings — spatial calm & editorial weight */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-emphasis: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+
+  /* Composed transitions */
+  --transition-colors: color var(--duration-fast) var(--ease-standard),
+    background-color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard);
+  --transition-opacity: opacity var(--duration-normal) var(--ease-standard);
+  --transition-transform: transform var(--duration-slow) var(--ease-emphasis);
+  --transition-shadow: box-shadow var(--duration-normal) var(--ease-standard);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-instant: 0ms;
+    --duration-fast: 0ms;
+    --duration-normal: 0ms;
+    --duration-slow: 0ms;
+    --duration-emphasis: 0ms;
+  }
+}

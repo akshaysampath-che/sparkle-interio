@@ -1,40 +1,51 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { ThemeProvider } from "@/components/providers/theme-provider";
-import { siteConfig } from "@/lib/config/site";
+import type { Metadata } from "next"
+import { Cormorant_Garamond, DM_Sans } from "next/font/google"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import { ThemeProvider } from "@/components/providers/theme-provider"
+import { siteConfig } from "@/lib/config/site"
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+import "./globals.css"
+
+const fontHeading = Cormorant_Garamond({
+  variable: "--font-heading",
   subsets: ["latin"],
-});
+  weight: ["400", "500", "600"],
+  display: "swap",
+})
+
+const fontSans = DM_Sans({
+  variable: "--font-sans",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  display: "swap",
+})
 
 export const metadata: Metadata = {
   title: siteConfig.name,
   description: siteConfig.description,
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${fontHeading.variable} ${fontSans.variable} h-full`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+      <body className="flex min-h-full flex-col">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           {children}
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
