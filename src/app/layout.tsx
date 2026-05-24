@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Cormorant_Garamond, DM_Sans } from "next/font/google"
 
+import { AppShellWrapper } from "@/components/layout"
 import { ThemeProvider } from "@/components/providers/theme-provider"
 import { siteConfig } from "@/lib/config/site"
 
@@ -21,7 +22,10 @@ const fontSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: siteConfig.name,
+  title: {
+    default: siteConfig.name,
+    template: `%s · ${siteConfig.name}`,
+  },
   description: siteConfig.description,
 }
 
@@ -36,14 +40,14 @@ export default function RootLayout({
       className={`${fontHeading.variable} ${fontSans.variable} h-full`}
       suppressHydrationWarning
     >
-      <body className="flex min-h-full flex-col">
+      <body className="min-h-dvh bg-background text-foreground antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <AppShellWrapper>{children}</AppShellWrapper>
         </ThemeProvider>
       </body>
     </html>
