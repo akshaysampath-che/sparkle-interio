@@ -1,0 +1,27 @@
+:root {
+  /* Brand */
+  --brand: oklch(0.488 0.243 264.376);
+  --brand-foreground: oklch(0.985 0 0);
+
+  /* Layout */
+  --container-max: 72rem; /* 1152px */
+  --container-padding: 1rem;
+}
+
+.dark {
+  --brand: oklch(0.67 0.19 264.376);
+  --brand-foreground: oklch(0.145 0 0);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --container-padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --container-padding: 2rem;
+  }
+}
+
