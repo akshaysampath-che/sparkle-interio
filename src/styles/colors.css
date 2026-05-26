@@ -18,6 +18,14 @@
   --palette-gold: oklch(0.72 0.065 82);
   --palette-gold-muted: oklch(0.62 0.045 80);
   --palette-gold-subtle: oklch(0.88 0.03 85);
+  --palette-burgundy: oklch(0.42 0.11 15);
+  --palette-burgundy-muted: oklch(0.48 0.09 18);
+
+  /* Hero drafting surface */
+  --hero-paper: oklch(0.992 0.003 95);
+  --hero-paper-warm: oklch(0.97 0.008 92);
+  --hero-line: oklch(0.68 0.025 85);
+  --hero-line-faint: oklch(0.78 0.018 88);
 
   /* —— Semantic (light) —— */
   --background: var(--palette-ivory);

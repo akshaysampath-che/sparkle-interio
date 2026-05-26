@@ -1,0 +1,6 @@
+export { ConsultationCtaSection } from "./consultation-cta-section"
+export { PhilosophySection } from "./philosophy-section"
+export { ProcessSection } from "./process-section"
+export { ProjectsSection } from "./projects-section"
+export { ServicesSection } from "./services-section"
+export { TestimonialsSection } from "./testimonials-section"

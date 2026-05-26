@@ -36,6 +36,10 @@
   --color-earth: var(--palette-earth);
   --color-charcoal: var(--palette-charcoal);
   --color-gold: var(--palette-gold);
+  --color-burgundy: var(--palette-burgundy);
+  --color-burgundy-muted: var(--palette-burgundy-muted);
+  --color-hero-paper: var(--hero-paper);
+  --color-hero-line: var(--hero-line);
   --color-surface-elevated: var(--surface-elevated);
   --color-surface-sunken: var(--surface-sunken);
 
@@ -128,9 +132,15 @@
   html {
     @apply font-sans antialiased;
     scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--nav-height) + 1.25rem);
+    overflow-x: clip;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  [id] {
+    scroll-margin-top: calc(var(--nav-height) + 1.25rem);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -144,6 +154,19 @@
     font-size: var(--text-base);
     line-height: var(--leading-normal);
     transition: var(--transition-colors);
+    overflow-x: clip;
+  }
+
+  @supports not (overflow: clip) {
+    html,
+    body {
+      overflow-x: hidden;
+    }
+  }
+
+  #__next,
+  main {
+    min-width: 0;
   }
 
   /* Editorial heading defaults */

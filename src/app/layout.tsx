@@ -34,12 +34,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  return (
-    <html
-      lang="en"
-      className={`${fontHeading.variable} ${fontSans.variable} h-full`}
-      suppressHydrationWarning
-    >
+return (
+  <html
+    lang="en"
+    data-scroll-behavior="smooth"
+    className={`${fontHeading.variable} ${fontSans.variable} h-full`}
+    suppressHydrationWarning
+  >
       <body className="min-h-dvh bg-background text-foreground antialiased">
         <ThemeProvider
           attribute="class"
