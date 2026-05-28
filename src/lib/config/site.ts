@@ -5,7 +5,7 @@ export const siteConfig = {
   description:
     "Sparkle Interio is an architectural luxury interior design studio crafting calm, functional, elevation-led interiors through geometry, intuition, material clarity, and transparent execution.",
   url: "https://sparkle-interio.vercel.app",
-  ogImage: "/images/brand-lockup.png",
+  ogImage: "/images/og-preview.png",
   keywords: [
     "Sparkle Interio",
     "interior design",
