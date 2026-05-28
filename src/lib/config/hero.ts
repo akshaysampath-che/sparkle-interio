@@ -8,11 +8,11 @@ export const heroContent = {
     "We shape interiors where measured geometry and intuitive craft converge, calm enduring environments that balance artistic vision, emotional resonance, and thoughtful practicality.",
   primaryCta: {
     label: "Book Consultation",
-    href: "/contact",
+    href: "/#contact",
   },
   secondaryCta: {
     label: "Explore Projects",
-    href: "/projects",
+    href: "/#projects",
   },
   heroImage: {
     /** Put your preferred homepage image at: public/images/hero-interior.jpg */

@@ -184,6 +184,6 @@ export const consultationContent = {
   heading: "Discuss your interior with calm precision",
   description:
     "Share your floor plan, inspiration, and priorities. We will respond with thoughtful next steps for consultation and spatial study.",
-  primaryCta: { label: "Book Consultation", href: "/contact" },
+  primaryCta: { label: "Book Consultation", href: "/#contact" },
   secondaryCta: { label: "WhatsApp Inquiry", href: "whatsapp" as const },
 } as const
